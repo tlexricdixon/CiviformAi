@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.AspNetCore.Components.Web;
-using static System.Net.WebRequestMethods;
+﻿
 
 namespace BlazorCMS.Components
 {
@@ -12,7 +9,7 @@ namespace BlazorCMS.Components
     // - Status: In Progress
     public partial class DragDrop()
     {
-        [Inject]
+        
         private HttpClient Http { get; set; } = default!;
         private List<UploadedFile> uploadedFiles = new();
         public async Task HandleDrop(DragEventArgs e){}
