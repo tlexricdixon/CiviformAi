@@ -18,7 +18,12 @@ namespace CiviformAi.Extensions
             services.AddSingleton<ILoggerManager, LoggerManager>();
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
          services.AddScoped<IRepositoryManager, RepositoryManager>();
-
+        public static void ConfigureAccessSchemaReader(this IServiceCollection services) =>
+         services.AddScoped<IAccessSchemaReader<TableSchema>, AccessSchemaReader>();
+        public static void ConfigureTempAccessSchemaStore(this IServiceCollection services) =>
+            services.AddSingleton<TempAccessSchemaStore>();
+        public static void ConfigureAccessImportService(this IServiceCollection services) =>
+            services.AddScoped<IAccessImportService<TableSchema>, AccessImportService>();
 
     }
 }

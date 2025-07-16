@@ -11,4 +11,21 @@
     <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Project\Data\" />
+    <Folder Include="Areas\Project\Models\" />
+    <Folder Include="TempUploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AccessInteropLib">
+      <HintPath>..\AccessInteropLib\bin\Debug\AccessInteropLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
 </Project>

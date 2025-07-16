@@ -1,0 +1,62 @@
+﻿@using CiviformAi.Areas.Admin.Models
+@model ProjectConfigViewModel
+@{
+    ViewData["Title"] = "Configure Database Connection";
+    Layout = "_Layout";
+}
+
+<h3>Database Connection for @Model.ProjectName</h3>
+
+<form asp-action="SaveDbConfig" method="post">
+    <input type="hidden" asp-for="ProjectName" />
+
+    <div class="form-group">
+        <label asp-for="DbType">Database Type</label>
+        <select asp-for="DbType" class="form-control">
+            <option>SQLServer</option>
+            <option>PostgreSQL</option>
+            <option>MySQL</option>
+            <option>SQLite</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DbServer" class="control-label"></label>
+        <input asp-for="DbServer" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DatabaseName" class="control-label"></label>
+        <input asp-for="DatabaseName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UseIntegratedSecurity" class="control-label">
+            <input asp-for="UseIntegratedSecurity" type="checkbox" />
+            Use Windows Authentication
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DbUser" class="control-label"></label>
+        <input asp-for="DbUser" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DbPassword" class="control-label"></label>
+        <input asp-for="DbPassword" type="password" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-secondary" type="submit" formaction="/Admin/Projects/TestDbConnection">Test Connection</button>
+        <button class="btn btn-primary" type="submit">Save & Continue</button>
+    </div>
+
+    @if (TempData["ConnectionResult"] != null)
+    {
+        var success = (bool)TempData["ConnectionSuccess"];
+        <div class="alert @(success ? "alert-success" : "alert-danger") mt-3">
+            @TempData["ConnectionResult"]
+        </div>
+    }
+</form>

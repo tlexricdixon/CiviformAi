@@ -1,0 +1,27 @@
+﻿@model List<string>
+@{
+    Layout = "_Layout";
+}
+<h3>Projects</h3>
+
+<a class="btn btn-primary mb-3" asp-area="Admin" asp-controller="Project" asp-action="StartProject">Create New Project</a>
+
+@if (!Model.Any())
+{
+    <p>No projects created yet.</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var name in Model)
+        {
+            <li class="list-group-item d-flex justify-content-between">
+                @name
+                <div>
+                    <a class="btn btn-sm btn-outline-primary" asp-controller="Project" asp-action="Configure" asp-route-projectName="@name">Configure</a>
+                    <a class="btn btn-sm btn-outline-success" asp-area="Project" asp-controller="Dashboard" asp-action="Index" asp-route-project="@name">Dashboard</a>
+                </div>
+            </li>
+        }
+    </ul>
+}

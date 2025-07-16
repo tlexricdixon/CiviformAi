@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entiti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{E4854EE6-BCEC-4A85-A22A-B42255271C62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessInteropLib", "AccessInteropLib\AccessInteropLib.csproj", "{6E06D98E-02C1-44A2-BD27-187647689546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E4854EE6-BCEC-4A85-A22A-B42255271C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4854EE6-BCEC-4A85-A22A-B42255271C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4854EE6-BCEC-4A85-A22A-B42255271C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E06D98E-02C1-44A2-BD27-187647689546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E06D98E-02C1-44A2-BD27-187647689546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E06D98E-02C1-44A2-BD27-187647689546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E06D98E-02C1-44A2-BD27-187647689546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
