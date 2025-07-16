@@ -1,0 +1,10 @@
+{
+  "ProjectName": "monkey man",
+  "DbServer": null,
+  "DatabaseName": null,
+  "DbUser": null,
+  "DbPassword": null,
+  "AccessVersion": "2007",
+  "UseIntegratedSecurity": null,
+  "EnableLogging": null
+}

@@ -14,6 +14,9 @@ namespace CiviformAi
             builder.Services.ConfigureCors();
             builder.Services.ConfigureLoggerService();
             builder.Services.ConfigureRepositoryManager();
+            builder.Services.ConfigureAccessSchemaReader();
+            builder.Services.ConfigureTempAccessSchemaStore();
+            builder.Services.ConfigureAccessImportService();
 
             var app = builder.Build();
 
@@ -36,10 +39,12 @@ namespace CiviformAi
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=AccessUpload}/{action=UploadAccessDb}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }

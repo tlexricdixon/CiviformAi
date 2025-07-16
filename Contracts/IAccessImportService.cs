@@ -1,12 +1,10 @@
-﻿namespace Contracts;
+﻿using Microsoft.AspNetCore.Http;
 
-public interface IAccessImportService
+namespace Contracts;
+
+public interface IAccessImportService<T>
 {
-
-    /// <summary>
-    /// Imports data from an Access database file.
-    /// </summary>
-    /// <param name="accessFilePath">The path to the Access database file.</param>
-    /// <returns>A task representing the asynchronous operation.</returns>
-    Task Import(string accessFilePath);
+    Task Import(T table);
+    string GenerateSQL(T schemaMap);
+    Task<List<Dictionary<string, object>>> MigrateTableDataAsync(string accessFilePath, string tableName);
 }
