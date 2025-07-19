@@ -27,6 +27,8 @@ namespace CiviformAi.Extensions
             services.AddScoped<IAccessImportService<TableSchema>, AccessImportService>();
         public static void ConfigureAccessFileService(this IServiceCollection services) =>
             services.AddScoped<IAccessFileService, AccessFileService>();
+        public static void ConfigureAccessSchemaService(this IServiceCollection services) =>
+            services.AddScoped <IAccessSchemaService, AccessSchemaService>();
 
     }
 }
