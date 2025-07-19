@@ -1,20 +1,42 @@
-﻿using CiviformAi.Areas.Admin.Models;
+﻿using CiviformAi.Models;
+using Contracts;
+using Entities;
 using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
 
 namespace CiviformAi.Areas.Admin.Data
 {
-    internal class ProjectService(IWebHostEnvironment env)
+    public class ProjectService
     {
-        private readonly string path = env.ContentRootPath;
-        public void Save(ProjectSettings config)
+        private readonly IWebHostEnvironment _env;
+        private readonly IAccessFileService _accessFileService;
+        public ProjectService(IWebHostEnvironment env, IAccessFileService accessFileService)
         {
-            var p = Path.Combine(path, "Projects", config.ProjectName);
-            Directory.CreateDirectory(p);
-            var configPath = Path.Combine(p, "config.json");
+            _env = env;
+            _accessFileService = accessFileService;
+        }
 
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            var json = JsonSerializer.Serialize(config, options);
-            File.WriteAllText(configPath, json);
+        public string GetProjectPath(string name) =>
+            Path.Combine(_env.ContentRootPath, "Projects", name);
+
+        public async Task SaveConfigAndFileAsync(ProjectSettings settings, IFormFile accessFile)
+        {
+            var dir = GetProjectPath(settings.ProjectName);
+            Directory.CreateDirectory(dir);
+            await File.WriteAllTextAsync(
+                Path.Combine(dir, "config.json"),
+                JsonSerializer.Serialize(settings, new JsonSerializerOptions { WriteIndented = true })
+            );
+
+            if (accessFile?.Length > 0)
+            {
+                _accessFileService.SaveAccessFileAsync(
+                    accessFile,
+                    Path.Combine(dir, "data.accdb"),
+                    Path.Combine(dir, "config.json")
+                ).GetAwaiter().GetResult();
+            }
         }
     }
 }
+

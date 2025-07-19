@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Entities;
 using LoggingService;
 using Repository;
 
@@ -24,6 +25,8 @@ namespace CiviformAi.Extensions
             services.AddSingleton<TempAccessSchemaStore>();
         public static void ConfigureAccessImportService(this IServiceCollection services) =>
             services.AddScoped<IAccessImportService<TableSchema>, AccessImportService>();
+        public static void ConfigureAccessFileService(this IServiceCollection services) =>
+            services.AddScoped<IAccessFileService, AccessFileService>();
 
     }
 }

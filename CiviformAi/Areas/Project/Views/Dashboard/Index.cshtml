@@ -1,9 +1,34 @@
-﻿@{
-    ViewBag.Title = "Project Dashboard";
-    var project = ViewBag.Project as string;
+﻿
+@using Entities
+@model ProjectSettings
+@{
+    Layout = "_Layout";
 }
 
-<h2>@project Project Dashboard</h2>
-<p>Ready to migrate, edit, or export your Access app.</p>
+<h2 class="mb-3">Dashboard: <span class="text-primary">@Model.ProjectName</span></h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered">
+            <tr><th>Database Server</th><td>@Model.DbServer</td></tr>
+            <tr><th>Database Name</th><td>@Model.DatabaseName</td></tr>
+            <tr><th>DB User</th><td>@Model.DbUser</td></tr>
+            <tr><th>Access Version</th><td>@Model.AccessVersion</td></tr>
+            <tr><th>Integrated Security</th><td>@Model.UseIntegratedSecurity</td></tr>
+            <tr><th>Enable Logging</th><td>@Model.EnableLogging</td></tr>
+            <tr><th>ACCDB Database</th><td>@Model.AccessFileName</td></tr>
+            <tr><th>Extract Forms</th><td><a href="" class="btn btn-success">Forms</a></td></tr>
+        </table>
+    </div>
+</div>
+<form asp-action="UploadAccessFile" asp-controller="Dashboard" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="project" value="@Model.ProjectName" />
+    <input type="file" name="AccessFile" class="form-control d-inline w-auto" />
+    <button type="submit" class="btn btn-secondary ms-2">Upload</button>
+</form>
+
+<a href="/Admin/Project/Index" class="btn btn-secondary">← Back to Projects</a>
+
+
 
 

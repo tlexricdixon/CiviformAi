@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System.Text.Json;
-using CiviformAi.Areas.Admin.Models;
+using CiviformAi.Models;
+using Entities;
 
 namespace CiviformAi.Controllers;
 public class HomeController : Controller

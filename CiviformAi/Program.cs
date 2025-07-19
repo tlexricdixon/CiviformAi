@@ -17,6 +17,7 @@ namespace CiviformAi
             builder.Services.ConfigureAccessSchemaReader();
             builder.Services.ConfigureTempAccessSchemaStore();
             builder.Services.ConfigureAccessImportService();
+            builder.Services.ConfigureAccessFileService();
 
             var app = builder.Build();
 

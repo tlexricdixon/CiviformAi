@@ -1,0 +1,1584 @@
+[
+  {
+    "TableName": "Catalog_TableOfContents",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "TocPage",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "TocPage 2 SMALLINT"
+      },
+      {
+        "ColumnName": "TocTitle",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "TocTitle 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Companies",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Address",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Address 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "BusinessPhone",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "BusinessPhone 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "City",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "City 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "CompanyID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "CompanyID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "CompanyName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "CompanyName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "CompanyTypeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "CompanyTypeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Notes",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Notes 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "StandardTaxStatusID",
+        "DataType": "17",
+        "SqlType": "DECIMAL(18,4)",
+        "Description": "StandardTaxStatusID 17 DECIMAL(18,4)"
+      },
+      {
+        "ColumnName": "StateAbbrev",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "StateAbbrev 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "Website",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Website 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "Zip",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Zip 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "CompanyTypes",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "CompanyType",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "CompanyType 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "CompanyTypeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "CompanyTypeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Contacts",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "CompanyID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "CompanyID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ContactID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ContactID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "EmailAddress",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "EmailAddress 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "FirstName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "FirstName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "JobTitle",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "JobTitle 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "LastName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "LastName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Notes",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Notes 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "PrimaryPhone",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "PrimaryPhone 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SecondaryPhone",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "SecondaryPhone 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "EmployeePrivileges",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "EmployeeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "EmployeeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "EmployeePrivilegeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "EmployeePrivilegeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "PrivilegeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "PrivilegeID 3 SMALLINT"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Employees",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Attachments",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Attachments 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "EmailAddress",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "EmailAddress 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "EmployeeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "EmployeeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "FirstName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "FirstName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "JobTitle",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "JobTitle 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "LastName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "LastName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Notes",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Notes 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "PrimaryPhone",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "PrimaryPhone 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SecondaryPhone",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "SecondaryPhone 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SupervisorID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "SupervisorID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "Title",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Title 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "WindowsUserName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "WindowsUserName 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Learn",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "ID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "SectionNo",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "SectionNo 2 SMALLINT"
+      },
+      {
+        "ColumnName": "SectionText",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "SectionText 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "MRU",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "DateAdded",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "DateAdded 7 DATETIME"
+      },
+      {
+        "ColumnName": "EmployeeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "EmployeeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "MRU_ID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "MRU_ID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "PKValue",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "PKValue 3 SMALLINT"
+      },
+      {
+        "ColumnName": "TableName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "TableName 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "NorthwindFeatures",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "Description",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Description 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "HelpKeywords",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "HelpKeywords 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ItemName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ItemName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "LearnMore",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "LearnMore 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "Navigation",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Navigation 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "NorthwindFeaturesID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "NorthwindFeaturesID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "OpenMethod",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OpenMethod 3 SMALLINT"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "OrderDetails",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Discount",
+        "DataType": "4",
+        "SqlType": "INT",
+        "Description": "Discount 4 INT"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "OrderDetailID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OrderDetailID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "OrderDetailStatusID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OrderDetailStatusID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "OrderID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OrderID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ProductID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "Quantity",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "Quantity 2 SMALLINT"
+      },
+      {
+        "ColumnName": "UnitPrice",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "UnitPrice 6 REAL"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "OrderDetailStatus",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "OrderDetailStatusID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OrderDetailStatusID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "OrderDetailStatusName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "OrderDetailStatusName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SortOrder",
+        "DataType": "17",
+        "SqlType": "DECIMAL(18,4)",
+        "Description": "SortOrder 17 DECIMAL(18,4)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Orders",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "CustomerID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "CustomerID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "EmployeeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "EmployeeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "InvoiceDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "InvoiceDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Notes",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Notes 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "OrderDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "OrderDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "OrderID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OrderID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "OrderStatusID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OrderStatusID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "PaidDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "PaidDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "PaymentMethod",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "PaymentMethod 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ShippedDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ShippedDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "ShipperID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ShipperID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ShippingFee",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "ShippingFee 6 REAL"
+      },
+      {
+        "ColumnName": "TaxRate",
+        "DataType": "4",
+        "SqlType": "INT",
+        "Description": "TaxRate 4 INT"
+      },
+      {
+        "ColumnName": "TaxStatusID",
+        "DataType": "17",
+        "SqlType": "DECIMAL(18,4)",
+        "Description": "TaxStatusID 17 DECIMAL(18,4)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "OrderStatus",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "OrderStatusCode",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "OrderStatusCode 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "OrderStatusID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "OrderStatusID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "OrderStatusName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "OrderStatusName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SortOrder",
+        "DataType": "17",
+        "SqlType": "DECIMAL(18,4)",
+        "Description": "SortOrder 17 DECIMAL(18,4)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Privileges",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "PrivilegeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "PrivilegeID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "PrivilegeName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "PrivilegeName 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "ProductCategories",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ProductCategoryCode",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ProductCategoryCode 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ProductCategoryDesc",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ProductCategoryDesc 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ProductCategoryID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductCategoryID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ProductCategoryImage",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ProductCategoryImage 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ProductCategoryName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ProductCategoryName 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Products",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Discontinued",
+        "DataType": "11",
+        "SqlType": "VARBINARY(MAX)",
+        "Description": "Discontinued 11 VARBINARY(MAX)"
+      },
+      {
+        "ColumnName": "MinimumReorderQuantity",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "MinimumReorderQuantity 2 SMALLINT"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ProductCategoryID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductCategoryID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ProductCode",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ProductCode 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ProductDescription",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ProductDescription 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ProductID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ProductName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ProductName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "QuantityPerUnit",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "QuantityPerUnit 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ReorderLevel",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "ReorderLevel 2 SMALLINT"
+      },
+      {
+        "ColumnName": "StandardUnitCost",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "StandardUnitCost 6 REAL"
+      },
+      {
+        "ColumnName": "TargetLevel",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "TargetLevel 2 SMALLINT"
+      },
+      {
+        "ColumnName": "UnitPrice",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "UnitPrice 6 REAL"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "ProductVendors",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ProductID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ProductVendorID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductVendorID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "VendorID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "VendorID 3 SMALLINT"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "PurchaseOrderDetails",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ProductID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "PurchaseOrderDetailID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "PurchaseOrderDetailID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "PurchaseOrderID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "PurchaseOrderID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "Quantity",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "Quantity 2 SMALLINT"
+      },
+      {
+        "ColumnName": "ReceivedDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ReceivedDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "UnitCost",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "UnitCost 6 REAL"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "PurchaseOrders",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ApprovedByID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ApprovedByID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ApprovedDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ApprovedDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Notes",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Notes 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "PaymentAmount",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "PaymentAmount 6 REAL"
+      },
+      {
+        "ColumnName": "PaymentDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "PaymentDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "PaymentMethod",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "PaymentMethod 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "PurchaseOrderID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "PurchaseOrderID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ReceivedDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ReceivedDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "ShippingFee",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "ShippingFee 6 REAL"
+      },
+      {
+        "ColumnName": "StatusID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "StatusID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "SubmittedByID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "SubmittedByID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "SubmittedDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "SubmittedDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "TaxAmount",
+        "DataType": "6",
+        "SqlType": "REAL",
+        "Description": "TaxAmount 6 REAL"
+      },
+      {
+        "ColumnName": "VendorID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "VendorID 3 SMALLINT"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "PurchaseOrderStatus",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "SortOrder",
+        "DataType": "17",
+        "SqlType": "DECIMAL(18,4)",
+        "Description": "SortOrder 17 DECIMAL(18,4)"
+      },
+      {
+        "ColumnName": "StatusID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "StatusID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "StatusName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "StatusName 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "States",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "StateAbbrev",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "StateAbbrev 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "StateName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "StateName 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "StockTake",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ExpectedQuantity",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ExpectedQuantity 3 SMALLINT"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ProductID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ProductID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "QuantityOnHand",
+        "DataType": "2",
+        "SqlType": "SMALLINT",
+        "Description": "QuantityOnHand 2 SMALLINT"
+      },
+      {
+        "ColumnName": "StockTakeDate",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "StockTakeDate 7 DATETIME"
+      },
+      {
+        "ColumnName": "StockTakeID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "StockTakeID 3 SMALLINT"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Strings",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "StringData",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "StringData 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "StringID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "StringID 3 SMALLINT"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "SystemSettings",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "Notes",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Notes 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SettingID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "SettingID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "SettingName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "SettingName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SettingValue",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "SettingValue 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "TaxStatus",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "TaxStatus",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "TaxStatus 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "TaxStatusID",
+        "DataType": "17",
+        "SqlType": "DECIMAL(18,4)",
+        "Description": "TaxStatusID 17 DECIMAL(18,4)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Titles",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "AddedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "AddedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "AddedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "AddedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "ModifiedBy",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "ModifiedBy 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ModifiedOn",
+        "DataType": "7",
+        "SqlType": "DATETIME",
+        "Description": "ModifiedOn 7 DATETIME"
+      },
+      {
+        "ColumnName": "Title",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Title 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "UserSettings",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "Notes",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Notes 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SettingID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "SettingID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "SettingName",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "SettingName 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "SettingValue",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "SettingValue 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  },
+  {
+    "TableName": "Welcome",
+    "FileName": "ozrgpy3k.se0.accdb",
+    "Columns": [
+      {
+        "ColumnName": "DataMacro",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "DataMacro 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "ID",
+        "DataType": "3",
+        "SqlType": "SMALLINT",
+        "Description": "ID 3 SMALLINT"
+      },
+      {
+        "ColumnName": "Learn",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Learn 130 NVARCHAR(MAX)"
+      },
+      {
+        "ColumnName": "Welcome",
+        "DataType": "130",
+        "SqlType": "NVARCHAR(MAX)",
+        "Description": "Welcome 130 NVARCHAR(MAX)"
+      }
+    ],
+    "IsConverted": false
+  }
+]
