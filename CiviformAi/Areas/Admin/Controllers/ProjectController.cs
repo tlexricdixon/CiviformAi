@@ -26,34 +26,26 @@ public class ProjectController(IWebHostEnvironment env, IAccessFileService acces
         if (!ModelState.IsValid) return View(vm);
 
         var settings = ProjectSettings.FromVm(vm);
-        settings.AccessFileName = vm.AccessFile.FileName ?? string.Empty; // Fix for CS8601  
+        settings.AccessFileName = vm.AccessFile?.FileName ?? string.Empty;
+
         var dir = Path.Combine(env.ContentRootPath, "Projects", vm.ProjectName);
         Directory.CreateDirectory(dir);
 
-        // Check if AccessFile is not null before calling SaveConfigAndFileAsync  
         if (AccessFile != null)
         {
             await _projectService.SaveConfigAndFileAsync(settings, AccessFile);
         }
         else
         {
-            // Handle the case where AccessFile is null, e.g., log an error or return a view with an error message  
             ModelState.AddModelError(string.Empty, "Access file is required.");
             return View(vm);
         }
 
         _projectStore.Save(settings);
 
-        // Save uploaded Access file  
-        if (AccessFile != null && AccessFile.Length > 0)
-        {
-            var accdbPath = Path.Combine(dir, "data.accdb");
-            using var fs = new FileStream(accdbPath, FileMode.Create);
-            await AccessFile.CopyToAsync(fs);
-        }
-
         return RedirectToAction("Index", "Dashboard", new { area = "Project", project = settings.ProjectName });
     }
+
 
     public IActionResult Configure(string projectName)
     {

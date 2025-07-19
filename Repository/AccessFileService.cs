@@ -1,23 +1,26 @@
 ﻿using Contracts;
 using Entities;
 using Microsoft.AspNetCore.Http;
+using System.Reflection.PortableExecutable;
 using System.Text.Json;
 
 namespace Repository;
 
-public class AccessFileService(IAccessSchemaService schemaService) : IAccessFileService
+public class AccessFileService(IAccessSchemaReader<TableSchema> reader, IAccessSchemaService schemaService) : IAccessFileService
 {
+    private readonly IAccessSchemaReader<TableSchema> _reader = reader;
     private readonly IAccessSchemaService _schemaService = schemaService;
 
     public async Task SaveAccessFileAsync(IFormFile accessFile, string project, string rootPath)
     {
         if (accessFile == null || accessFile.Length <= 0)
             return;
-
+        
+        
         var basePath = Path.Combine(rootPath, "Projects", project);
         Directory.CreateDirectory(basePath);
 
-        var accdbPath = Path.Combine(basePath, "data.accdb");
+        var accdbPath = Path.Combine(basePath, accessFile.FileName);
         var configPath = Path.Combine(basePath, "config.json");
 
         var fileName = Path.GetFileName(accessFile.FileName);
@@ -36,7 +39,8 @@ public class AccessFileService(IAccessSchemaService schemaService) : IAccessFile
             }
         }
 
-        var schema = await _schemaService.CreateAccessSchemaAsync(new List<IFormFile> { accessFile }, basePath);
+        var schema = _reader.GetAccessSchema(accdbPath);
+        
         await _schemaService.SaveAccessSchemaAsync(schema, basePath);
     }
 

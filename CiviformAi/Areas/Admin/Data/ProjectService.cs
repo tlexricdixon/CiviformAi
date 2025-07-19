@@ -32,7 +32,7 @@ namespace CiviformAi.Areas.Admin.Data
             {
                 _accessFileService.SaveAccessFileAsync(
                     accessFile,
-                    Path.Combine(dir, "data.accdb"),
+                    dir,
                     Path.Combine(dir, "config.json")
                 ).GetAwaiter().GetResult();
             }

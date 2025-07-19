@@ -44,7 +44,7 @@ public class DashboardController : Controller
         if (AccessFile != null && AccessFile.Length > 0)
         {
             await _accessFileService.SaveAccessFileAsync
-                 (AccessFile, Path.Combine(path, "data.accdb"), configPath);
+                 (AccessFile, path, configPath);
         } 
 
         TempData["Status"] = "Access file uploaded and configuration updated.";

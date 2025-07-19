@@ -7,35 +7,24 @@ using System.Data.OleDb;
 namespace Repository;
 public class AccessSchemaReader : IAccessSchemaReader<TableSchema>
 {
-    public async Task<List<TableSchema>> GetAccessSchemaAsync(List<IFormFile> files, string basePath)
+    public List<TableSchema> GetAccessSchema(string accdbFilePath)
     {
         var result = new List<TableSchema>();
-        var uploadDir = Path.Combine(basePath, "TempUploads");
 
-        Directory.CreateDirectory(uploadDir); // Ensure the directory exists
+        if (!File.Exists(accdbFilePath))
+            return result;
 
-        foreach (var file in files)
+        try
         {
-            var extension = Path.GetExtension(file.FileName);
-            if (extension != ".accdb" && extension != ".mdb")
-                continue;
-
-            var savePath = Path.Combine(uploadDir, Path.GetRandomFileName() + extension);
-
-            await using (var stream = file.OpenReadStream())
-            await using (var fs = new FileStream(savePath, FileMode.Create))
-            {
-                await stream.CopyToAsync(fs);
-            }
-
-            await Task.Delay(50); // Small delay to ensure file is released
-
+            // Try opening with shared read to prevent exclusive lock issues
             var reader = new AccessSchemaReader();
-            var tables = reader.GetTableNames(savePath);
+
+            var tables = reader.GetTableNames(accdbFilePath);
 
             foreach (var table in tables)
             {
-                var columnList = reader.GetTableSchema(savePath, table);
+                var columnList = reader.GetTableSchema(accdbFilePath, table);
+
                 var columnSchemas = columnList.Select(col => new ColumnSchema
                 {
                     ColumnName = col.ColumnName,
@@ -47,12 +36,28 @@ public class AccessSchemaReader : IAccessSchemaReader<TableSchema>
                 {
                     TableName = table,
                     Columns = columnSchemas,
-                    FileName = Path.GetFileName(savePath) // Preserve for later data migration
+                    FileName = Path.GetFileName(accdbFilePath)
                 });
             }
         }
+        catch (OleDbException ex) when (ex.Message.Contains("file already in use", StringComparison.OrdinalIgnoreCase))
+        {
+            // Log and/or return a partial result or empty list
+            // Optional: Show error in UI or flag for retry
+            Console.Error.WriteLine($"⚠ Access file locked: {accdbFilePath}");
+            // Optionally throw, return empty, or attach error info to a special TableSchema
+        }
+        catch (Exception ex)
+        {
+            // Handle other unexpected issues
+            Console.Error.WriteLine($"❌ Failed to extract schema: {ex.Message}");
+            throw; // or return partial if appropriate
+        }
+
         return result;
     }
+
+
 
     private string ConvertJetCodeToSqlType(int jetCode)
     {

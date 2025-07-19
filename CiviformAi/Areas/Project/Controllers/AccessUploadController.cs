@@ -28,17 +28,17 @@ public class AccessUploadController : Controller
         return View(schemaMap);
     }
 
-    [HttpPost]
-    [RequestSizeLimit(50_000_000)]
-    public async Task<IActionResult> UploadAccessDb(List<IFormFile> files)
-    {
-        if (files == null || files.Count == 0)
-            return BadRequest("No files uploaded.");
-        var schemaMap = await _reader.GetAccessSchemaAsync(files, path);
-        // For now, just show it in a View or return JSON
-        _tempAccessStore.SaveSchema(schemaMap);
-        return View(schemaMap);
-    }
+    //[HttpPost]
+    //[RequestSizeLimit(50_000_000)]
+    //public async Task<IActionResult> UploadAccessDb(List<IFormFile> files)
+    //{
+    //    if (files == null || files.Count == 0)
+    //        return BadRequest("No files uploaded.");
+    //    var schemaMap = await _reader.GetAccessSchemaAsync(files, path);
+    //    // For now, just show it in a View or return JSON
+    //    _tempAccessStore.SaveSchema(schemaMap);
+    //    return View(schemaMap);
+    //}
     public IActionResult Details(string tableName)
     {
         var table = _tempAccessStore.GetTable(tableName);

@@ -14,6 +14,23 @@ public class AccessImportService : IAccessImportService<TableSchema>
     "Integrated Security=True;" +
     "TrustServerCertificate=True;";
 
+    public async Task EnsureSqlDatabaseExistsAsync(string connectionString, string databaseName)
+    {
+        var builder = new SqlConnectionStringBuilder(connectionString)
+        {
+            InitialCatalog = "master" // Connect to master to create new DB
+        };
+
+        using var connection = new SqlConnection(builder.ConnectionString);
+        await connection.OpenAsync();
+
+        var checkCmd = new SqlCommand(
+            $"IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = @name) " +
+            $"BEGIN CREATE DATABASE [{databaseName}] END", connection);
+
+        checkCmd.Parameters.AddWithValue("@name", databaseName);
+        await checkCmd.ExecuteNonQueryAsync();
+    }
 
     public string GenerateSQL(TableSchema schemaMap)
     {
