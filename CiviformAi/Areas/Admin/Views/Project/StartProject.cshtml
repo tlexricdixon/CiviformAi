@@ -1,0 +1,12 @@
+﻿@using Entities
+@model ProjectConfigViewModel
+@{
+    ViewData["Title"] = "Start New Project";
+    Layout = "_Layout";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="StartProject" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @await Html.PartialAsync("_ProjectForm", Model)
+</form>

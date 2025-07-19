@@ -1,0 +1,57 @@
+﻿@using Entities
+@model ProjectConfigViewModel
+
+<form asp-action="StartProject" method="post" enctype="multipart/form-data">
+<div class="form-group">
+    @Html.LabelFor(m => m.ProjectName)
+    @Html.TextBoxFor(m => m.ProjectName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.ProjectName, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.DbServer)
+    @Html.TextBoxFor(m => m.DbServer, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.DbServer, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.DatabaseName)
+    @Html.TextBoxFor(m => m.DatabaseName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.DatabaseName, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.DbUser)
+    @Html.TextBoxFor(m => m.DbUser, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.DbPassword)
+    @Html.PasswordFor(m => m.DbPassword, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.AccessVersion)
+    @Html.DropDownListFor(m => m.AccessVersion,
+    new SelectList(new[] { "2007", "2010", "2013", "2016", "2019", "365" }),
+        "-- Select Version --", new { @class = "form-control" })
+</div>
+
+<div class="form-check">
+    @Html.CheckBoxFor(m => m.UseIntegratedSecurity, new { @class = "form-check-input" })
+    @Html.LabelFor(m => m.UseIntegratedSecurity, new { @class = "form-check-label" })
+</div>
+
+<div class="form-check">
+    @Html.CheckBoxFor(m => m.EnableLogging, new { @class = "form-check-input" })
+    @Html.LabelFor(m => m.EnableLogging, new { @class = "form-check-label" })
+</div>
+
+ <div class="form-group">
+        <label for="AccessFile">Access DB File (.accdb)</label>
+        <input type="file" name="AccessFile" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Project</button>
+</form>
+

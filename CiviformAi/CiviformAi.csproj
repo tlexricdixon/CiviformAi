@@ -12,8 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Project\Data\" />
     <Folder Include="Areas\Project\Models\" />
+    <Folder Include="Projects\" />
     <Folder Include="TempUploads\" />
   </ItemGroup>
 

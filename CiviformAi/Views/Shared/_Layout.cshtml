@@ -10,68 +10,18 @@
 </head>
 <body>
     <div class="d-flex flex-column vh-100">
-        <div class="top-row navbar navbar-dark bg-dark">
+        <!-- Top Nav -->
+        <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">CiviformAi</a>
             </div>
-        </div>
+        </nav>
 
         <div class="d-flex flex-grow-1">
             <!-- Sidebar -->
-            <div class="bg-light border-end p-3" style="min-width: 250px;">
-                <ul class="nav flex-column">
-                    <li class="nav-item d-flex justify-content-between align-items-center">
-                        <a class="nav-link fw-bold"
-                           asp-area="Admin"
-                           asp-controller="Project"
-                           asp-action="Index">
-                            Admin
-                        </a>
-                        <button class="btn btn-sm" type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#adminMenu"
-                                aria-expanded="@(ViewContext.RouteData.Values["area"]?.ToString() == "Admin")"
-                                aria-controls="adminMenu">
-                            ▼
-                        </button>
-                    </li>
-                    <div class="collapse @(ViewContext.RouteData.Values["area"]?.ToString() == "Admin" ? "show" : "")"
-                         id="adminMenu">
-                        <ul class="nav flex-column ms-3">
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Admin" asp-controller="Project" asp-action="Index">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Admin" asp-controller="Project" asp-action="Configure">Configure</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Admin" asp-controller="AccessUpload" asp-action="UploadAccessDb">Upload</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Admin" asp-controller="AccessSchema" asp-action="Index">Schema</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Northwind Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" data-bs-toggle="collapse" href="#northwindMenu"
-                           role="button"
-                           aria-expanded="@(ViewContext.RouteData.Values["area"]?.ToString() == "Northwind")"
-                           aria-controls="northwindMenu">
-                            Northwind
-                        </a>
-                        <div class="collapse @(ViewContext.RouteData.Values["area"]?.ToString() == "Northwind" ? "show" : "")"
-                             id="northwindMenu">
-                            <ul class="nav flex-column ms-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="Northwind" asp-controller="Home" asp-action="Index">Dashboard</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <aside class="bg-light border-end p-3" style="min-width: 250px;">
+                @await Html.PartialAsync("~/Views/Shared/_Nav.cshtml")
+            </aside>
 
             <!-- Main Content -->
             <div class="container-fluid p-4">
@@ -94,6 +44,7 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
 
 
 

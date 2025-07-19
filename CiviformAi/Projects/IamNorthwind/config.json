@@ -1,0 +1,11 @@
+{
+  "ProjectName": "IamNorthwind",
+  "DbServer": "LAPTOP-57G6RU3I\\\\TLEXDEVSQL",
+  "DatabaseName": "NorthwindStarter",
+  "DbUser": null,
+  "DbPassword": null,
+  "AccessVersion": "2010",
+  "UseIntegratedSecurity": true,
+  "EnableLogging": true,
+  "AccessFileName": "Database1.accdb"
+}

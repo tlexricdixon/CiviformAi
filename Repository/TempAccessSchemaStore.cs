@@ -1,4 +1,6 @@
-﻿namespace Repository;
+﻿using Entities;
+
+namespace Repository;
 
 public class TempAccessSchemaStore
 {

@@ -1,25 +1,49 @@
 ﻿@model List<string>
 @{
     Layout = "_Layout";
+    ViewData["Title"] = "Project Management";
 }
-<h3>Projects</h3>
 
-<a class="btn btn-primary mb-3" asp-area="Admin" asp-controller="Project" asp-action="StartProject">Create New Project</a>
+<h2 class="mb-4">Project Management</h2>
+
+<p class="text-muted">
+    Manage your Access-to-SQL conversion projects here. Create, configure, or revisit projects to streamline your database modernization process.
+</p>
+
+<a class="btn btn-primary mb-3" asp-area="Admin" asp-controller="Project" asp-action="StartProject">
+    <i class="bi bi-plus-circle me-1"></i> Create New Project
+</a>
 
 @if (!Model.Any())
 {
-    <p>No projects created yet.</p>
+    <div class="alert alert-info">
+        <i class="bi bi-lightbulb"></i> <strong>No projects found.</strong> Start your first migration by clicking <strong>Create New Project</strong> above.
+    </div>
 }
 else
 {
     <ul class="list-group">
         @foreach (var name in Model)
         {
-            <li class="list-group-item d-flex justify-content-between">
-                @name
+            <li class="list-group-item d-flex justify-content-between align-items-center">
                 <div>
-                    <a class="btn btn-sm btn-outline-primary" asp-controller="Project" asp-action="Configure" asp-route-projectName="@name">Configure</a>
-                    <a class="btn btn-sm btn-outline-success" asp-area="Project" asp-controller="Dashboard" asp-action="Index" asp-route-project="@name">Dashboard</a>
+                    <i class="bi bi-folder-fill text-secondary me-2"></i>
+                    <strong>@name</strong>
+                </div>
+                <div>
+                    <a class="btn btn-sm btn-outline-primary me-2"
+                       asp-controller="Project"
+                       asp-action="Configure"
+                       asp-route-projectName="@name">
+                        <i class="bi bi-gear-fill me-1"></i> Configure
+                    </a>
+                    <a class="btn btn-sm btn-outline-success"
+                       asp-area="Project"
+                       asp-controller="Dashboard"
+                       asp-action="Index"
+                       asp-route-project="@name">
+                        <i class="bi bi-speedometer2 me-1"></i> Dashboard
+                    </a>
                 </div>
             </li>
         }

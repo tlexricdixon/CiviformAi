@@ -1,0 +1,70 @@
+﻿@using Entities
+@using Repository
+@model TableSchema
+@{
+    Layout = "_Layout";
+}
+<h3>Table: @Model.TableName</h3>
+<div class="card mb-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <table class="table">
+    <thead>
+        <tr>
+            <th>Column Name</th>
+            <th>Jet Type</th>
+            <th>SQL Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var col in Model.Columns)
+        {
+            var allowedTypes = TypeCompatibilityService.GetCompatibleTypes(col.SqlType);
+            <tr>
+                <td>@col.ColumnName</td>
+                <td>@col.DataType</td>
+                <td>
+                    <select asp-for="@col.SqlType" class="form-control">
+                        @foreach (var type in allowedTypes)
+                        {
+                            <option selected="@(type == col.SqlType)">@type</option>
+                        }
+                    </select>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+<div class="card-footer d-flex justify-content-between">
+    <form asp-action="GenerateSql" method="post">
+        <input type="hidden" name="tableName" value="@Model.TableName" />
+        <button type="submit" class="btn btn-secondary">Generate SQL Preview</button>
+    </form>
+        <form asp-action="CreateTable" method="post">
+            <input type="hidden" name="TableName" value="@Model.TableName" />
+            <input type="hidden" name="fileName" value="@Model.FileName" />
+            @for (int i = 0; i < Model.Columns.Count; i++)
+            {
+                <input type="hidden" name="Columns[@i].ColumnName" value="@Model.Columns[i].ColumnName" />
+                <input type="hidden" name="Columns[@i].DataType" value="@Model.Columns[i].DataType" />
+                <input type="hidden" name="Columns[@i].SqlType" value="@Model.Columns[i].SqlType" />
+            }
+
+            <button type="submit" class="btn btn-success">Create Table</button>
+        </form>
+    <a href="@Url.Action("UploadAccessDb", "AccessUpload")" class="btn btn-secondary">Back to Uploaded Tables</a>
+</div>
+    @if (ViewBag.SqlPreview != null)
+    {
+        <div class="alert alert-info mt-3">
+            <h6 class="mb-2">SQL Preview:</h6>
+            <pre>@ViewBag.SqlPreview</pre>
+        </div>
+        <div>
+            <button onclick="navigator.clipboard.writeText('@ViewBag.SqlPreview')">Copy SQL</button>
+        </div>
+    }
+
+</div>
+
+

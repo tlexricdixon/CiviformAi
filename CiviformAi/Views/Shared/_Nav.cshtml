@@ -1,0 +1,66 @@
+﻿@using System.IO
+@inject IWebHostEnvironment _env
+@{
+    var projectsRoot = System.IO.Path.Combine(_env.ContentRootPath, "Projects");
+    var projectDirs = System.IO.Directory.Exists(projectsRoot)
+        ? System.IO.Directory.GetDirectories(projectsRoot).Select(p => System.IO.Path.GetFileName(p)).ToList()
+        : new List<string>();
+    var currentArea = ViewContext.RouteData.Values["area"]?.ToString();
+}
+
+<ul class="nav flex-column">
+
+    <!-- Admin Section -->
+    <li class="nav-item">
+        <div class="d-flex justify-content-between align-items-center">
+            <a class="nav-link fw-bold @(currentArea == "Admin" ? "active" : "")"
+               asp-area="Admin"
+               asp-controller="Project"
+               asp-action="Index">
+                Admin
+            </a>
+            <button class="btn btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adminMenu"
+                    aria-expanded="@(currentArea == "Admin" ? "true" : "false")"
+                    aria-controls="adminMenu">
+                ▼
+            </button>
+        </div>
+        <div class="collapse @(currentArea == "Admin" ? "show" : "")"
+             id="adminMenu">
+            <ul class="nav flex-column ms-3">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Admin" asp-controller="Project" asp-action="Index">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Admin" asp-controller="Project" asp-action="StartProject">Start New Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Admin" asp-controller="Project" asp-action="Configure">Configure</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Admin" asp-controller="AccessUpload" asp-action="UploadAccessDb">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="Admin" asp-controller="AccessSchema" asp-action="Index">Schema</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+    <!-- Project Sections -->
+    @foreach (var proj in projectDirs)
+    {
+        <li class="nav-item">
+            <a class="nav-link fw-bold @(ViewContext.RouteData.Values["project"]?.ToString() == proj ? "active" : "")"
+               asp-area="Project"
+               asp-controller="Dashboard"
+               asp-action="Index"
+               asp-route-project="@proj">
+                @proj
+            </a>
+        </li>
+    }
+</ul>

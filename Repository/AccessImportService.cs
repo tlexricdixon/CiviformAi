@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Entities;
 using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Data.OleDb;
