@@ -51,7 +51,6 @@ public class AccessSchemaReader : IAccessSchemaReader<TableSchema>
                 });
             }
         }
-
         return result;
     }
 
